@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Time Capsule</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="light-mode">
+  <header>
+    <h1>⏰ My Time Capsule</h1>
+    <nav>
+      <button id="theme-toggle">Toggle Theme</button>
+      <a href="#add-section">Add Memory</a>
+      <a href="#view-section">View Memories</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Add Memory Section -->
+    <section id="add-section">
+      <h2>Add a New Memory</h2>
+      <form id="memory-form">
+        <input type="text" id="title" placeholder="Title" required />
+        <textarea id="description" placeholder="Write your memory or goal..." required></textarea>
+        <select id="category" required>
+          <option value="">Select Category</option>
+          <option value="Personal">Personal</option>
+          <option value="Career">Career</option>
+          <option value="Travel">Travel</option>
+          <option value="Goals">Goals</option>
+        </select>
+        <input type="date" id="unlock-date" required />
+        <button type="submit">Save Memory</button>
+      </form>
+    </section>
+
+    <!-- View Memories Section -->
+    <section id="view-section">
+      <h2>Saved Memories</h2>
+      <label for="filter-category">Filter by Category:</label>
+      <select id="filter-category">
+        <option value="All">All</option>
+        <option value="Personal">Personal</option>
+        <option value="Career">Career</option>
+        <option value="Travel">Travel</option>
+        <option value="Goals">Goals</option>
+      </select>
+      <div id="memory-list" class="card-container"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
